@@ -15,7 +15,6 @@ class ProjectReader:
         descrip = xs["tool"]["poetry"]["description"]
         dep = xs["tool"]["poetry"]["dependencies"]
         dev_dep = xs["tool"]["poetry"]["dev-dependencies"]
-        print(content)
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
         return Project(name, descrip, dep, dev_dep)
