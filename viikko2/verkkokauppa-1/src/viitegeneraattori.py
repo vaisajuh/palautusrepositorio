@@ -7,3 +7,4 @@ class Viitegeneraattori:
         self._seuraava = self._seuraava + 1
 
         return self._seuraava
+viitegeneraattori = Viitegeneraattori()
