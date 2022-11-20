@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "nhl-reader"
+name = "ohtu-robot"
 version = "0.1.0"
 description = ""
 authors = ["Kalle Ilves <kalle.ilves@helsinki.fi>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-requests = "^2.28.1"
+Flask = "^2.2.2"
 
 [tool.poetry.dev-dependencies]
+robotframework = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
