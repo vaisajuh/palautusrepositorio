@@ -15,11 +15,10 @@ def main():
             player = Player(
                 player_dict
             )
-            print(player)
             players.append(player)
 
     print("Oliot:")
-
+    players = sorted(players, reverse=True, key=lambda player: player.points)
     for player in players:
         print(player)
 
