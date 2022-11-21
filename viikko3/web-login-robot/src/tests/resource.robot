@@ -22,5 +22,11 @@ Login Page Should Be Open
 Main Page Should Be Open
     Title Should Be  Ohtu Application main page
 
+Index Page Should Be Open
+    Title Should Be  ''
+
 Go To Login Page
     Go To  ${LOGIN URL}
+
+Go To Index Page
+    Go To  ${HOME URL}
