@@ -32,9 +32,9 @@ class Ostoskori:
 
     def poista_tuote(self, poistettava: Tuote):
         olio = Ostos(poistettava)
-        self.kori = list(
-            filter(lambda t: t.tuotteen_nimi() != olio.tuotteen_nimi(), self.kori)
-        )
+        for ostos in self.kori:
+            if ostos.tuotteen_nimi() == olio.tuotteen_nimi():
+                ostos.muuta_lukumaaraa(-1)
 
     def tyhjenna(self):
         pass
