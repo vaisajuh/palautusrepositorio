@@ -35,6 +35,8 @@ class Ostoskori:
         for ostos in self.kori:
             if ostos.tuotteen_nimi() == olio.tuotteen_nimi():
                 ostos.muuta_lukumaaraa(-1)
+                if ostos.lukumaara() == 0:
+                    self.kori.remove(ostos)
 
     def tyhjenna(self):
         pass
