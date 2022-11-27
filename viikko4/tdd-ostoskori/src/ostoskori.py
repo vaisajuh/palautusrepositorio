@@ -20,17 +20,20 @@ class Ostoskori:
 
     def lisaa_tuote(self, lisattava: Tuote):
         olio = Ostos(lisattava)
-        if olio in self.kori:
-            self.poista_tuote(lisattava)
-            olio.lukumaara += 1
-            self.kori.append(olio)
-        else:
-            self.kori.append(olio)
+        count = 0
+        for ostos in self.kori:
+            if ostos.tuotteen_nimi() == olio.tuotteen_nimi():
+                count += 1
+                ostos.muuta_lukumaaraa(1)
+        if count == 1:
+            return
+        self.kori.append(olio)
+
 
     def poista_tuote(self, poistettava: Tuote):
         olio = Ostos(poistettava)
         self.kori = list(
-            filter(lambda t: olio.tuoteen_nimi != self.kori)
+            filter(lambda t: t.tuotteen_nimi() != olio.tuotteen_nimi(), self.kori)
         )
 
     def tyhjenna(self):
