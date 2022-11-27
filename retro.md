@@ -11,4 +11,4 @@ Käynnistä, pysähdy, jatka, lisää tätä, vähemmän tätä –pyörässä, 
 joka sisältää sanat käynnistä, pysähdy, jatka, lisää tätä ja vähemmän tätä. Näiden kategorioiden alle kukin ryhmän jäset voi kirjata 
 mietteitään koskien projektia ja näistä keskustellaan myöhemmin.
 
- 
+
