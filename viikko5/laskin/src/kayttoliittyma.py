@@ -13,6 +13,7 @@ class Kayttoliittyma:
     def __init__(self, sovellus, root):
         self._sovellus = sovellus
         self._root = root
+        self.mem = []
 
     def kaynnista(self):
         self._tulos_var = StringVar()
@@ -75,10 +76,16 @@ class Kayttoliittyma:
         self._tulos_var.set(self._sovellus.tulos)
     
     def _komentotehdas(self, arvo, komento):
+        
         self.komennot = {
             Komento.SUMMA: self._sovellus.plus(arvo),
             Komento.EROTUS: self._sovellus.miinus(arvo),
             Komento.NOLLAUS: self._sovellus.nollaa(),
         }
-        if komento in self.komennot:
+        if komento == Komento.KUMOA:
+            return self.mem[-2]
+
+        elif komento in self.komennot:
+            a = self.komennot[komento]
+            self.mem.append(a)
             return self.komennot[komento]
